@@ -8,6 +8,7 @@ use Illuminate\Database\Seeder;
 use Faker\Generator as Faker;
 use Illuminate\Support\Arr;
 use App\Functions\Helpers as Helpers;
+use App\Models\Type;
 use Illuminate\Support\Str;
 
 class ProjectSeeder extends Seeder
@@ -23,6 +24,9 @@ class ProjectSeeder extends Seeder
 
             $newProject = new Project();
 
+            $type = Type::inRandomOrder()->first();
+
+            $newProject->type_id = $type->id;
             $newProject->title = $faker->sentence(3);
             $newProject->slug = Str::slug($newProject->title);
             $newProject->status = $faker->word();
