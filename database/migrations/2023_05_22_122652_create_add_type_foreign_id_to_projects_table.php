@@ -32,6 +32,10 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('add_type_foreign_id_to_projects');
+        Schema::table('projects', function (Blueprint $table) {
+            
+            $table->dropForeign(['type_id']);
+            $table->dropColumn('type_id');
+        });
     }
 };
