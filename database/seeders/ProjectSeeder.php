@@ -30,7 +30,6 @@ class ProjectSeeder extends Seeder
             $newProject->title = $faker->sentence(3);
             $newProject->slug = Str::slug($newProject->title);
             $newProject->status = $faker->word();
-            $newProject->type = $faker->word();
             $newProject->starting_date = $faker->date();
             $newProject->overview = $faker->paragraph();
             $newProject->objectives = $faker->sentence(10);

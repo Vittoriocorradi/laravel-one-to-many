@@ -30,7 +30,7 @@
                 <tr>
                     <td>{{ $project->title }} </td>
                     <td>{{ $project->status }} </td>
-                    <td>{{ $project->type }} </td>
+                    <td>{{ $project->type?->name ?: 'No type' }} </td>
                     <td>{{ $project->starting_date }}</td>
                     <td>
                         <ul class="d-flex list-unstyled gap-2 justify-content-end align-items-center m-0">
