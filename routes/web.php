@@ -30,6 +30,7 @@ Route::middleware(['auth', 'verified'])
         // Route::get('/', [DashboardController::class, 'index'])
         //     ->name('dashboard');
         Route::resource('projects', ProjectController::class)->parameters(['projects'=>'project:slug']);
+        Route::resource('types', TypeController::class)->parameters(['types'=>'type:slug']);
 
     // Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     // Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
