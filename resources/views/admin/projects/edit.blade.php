@@ -46,13 +46,6 @@
             @enderror
         </div>
         <div class="mb-3">
-            <label for="type" class="form-label">Type</label>
-            <input type="text" class="form-control @error('type') is-invalid @enderror" id="type" name="type"value="{{ old('type', $project->type) }}" >
-            @error('type')
-            <div class="alert alert-danger">{{ $message }}</div>
-            @enderror
-        </div>
-        <div class="mb-3">
             <label for="priority" class="form-label">Priority</label>
             <input type="text" class="form-control @error('priority') is-invalid @enderror" id="priority" name="priority" value="{{ old('priority', $project->priority) }}">
             @error('priority')

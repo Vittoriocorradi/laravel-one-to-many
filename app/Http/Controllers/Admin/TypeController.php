@@ -87,6 +87,6 @@ class TypeController extends Controller
     {
         $type->delete();
 
-        return redirect()->route('admin.type.index')->with('message', "Type succesfully cancelled");
+        return redirect()->route('admin.types.index')->with('message', "Type succesfully cancelled");
     }
 }

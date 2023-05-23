@@ -24,10 +24,8 @@ class StoreProjectRequest extends FormRequest
     public function rules()
     {
         return [
-            'type_id' => 'nullable|exists:types,id',
             'title' => 'required|unique:projects|string|max:75',
             'status' => 'required|string|max:30',
-            'type' => 'required|string|max:40',
             'starting_date' => 'required|date',
             'finishing_date' => 'nullable|date',
             'overview' => 'required|string',
@@ -36,7 +34,8 @@ class StoreProjectRequest extends FormRequest
             'priority' => 'nullable|string|max:30',
             'contributors' => 'nullable|string',
             'is_finished' => 'digits:1|integer|between:0,1',
-            'image' => 'nullable|image|max:2048'
+            'image' => 'nullable|image|max:2048',
+            'type_id' => 'nullable|exists:types,id',
         ];
     }
 }

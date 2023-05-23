@@ -45,7 +45,8 @@ class ProjectController extends Controller
     {
         $request->validated();
         $data = $request->all();
-
+        // $data = $request->validated();
+        
         $newProject = new Project();
         
         $newProject->fill($data);

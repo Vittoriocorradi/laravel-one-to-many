@@ -30,7 +30,6 @@ class UpdateProjectRequest extends FormRequest
             'string',
             'max:75'],
             'status' => 'required|string|max:30',
-            'type' => 'required|string|max:40',
             'starting_date' => 'required|date',
             'finishing_date' => 'nullable|date',
             'overview' => 'required|string',
